@@ -1,0 +1,710 @@
+/* Volunteer Detail Page Styles */
+
+.coverage-detail-container {
+    max-width: 1200px;
+    margin: 80px auto 2rem;
+    padding: 0 1rem;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--gotr-purple);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    color: var(--gotr-pink);
+    transform: translateX(-3px);
+}
+
+/* Coverage Header */
+.coverage-header-detail {
+    background: linear-gradient(135deg, var(--gotr-pink), var(--gotr-purple));
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(109, 63, 132, 0.3);
+}
+
+.header-content h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.urgency-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.urgency-badge-large {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1.125rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.time-remaining {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Details Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detail-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.detail-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.detail-card h3 {
+    color: var(--gotr-purple);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.detail-card h3 i {
+    color: var(--gotr-pink);
+}
+
+/* Info Rows */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gotr-light-grey);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 600;
+    color: #666;
+}
+
+.value {
+    font-weight: 700;
+    color: var(--text-black);
+}
+
+/* Map Preview */
+.map-preview {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Team Notes */
+.team-notes {
+    background-color: var(--gotr-tan);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.team-notes p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Requirements */
+.requirements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.requirement-item.checked {
+    background-color: rgba(111, 181, 68, 0.1);
+}
+
+.requirement-item i {
+    font-size: 1.25rem;
+}
+
+.requirement-item.checked i {
+    color: var(--gotr-green);
+}
+
+.requirement-note {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(111, 181, 68, 0.1);
+    border-radius: 8px;
+    color: var(--gotr-green);
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Lesson Timeline */
+.lesson-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: var(--gotr-pink);
+    border-radius: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 12px;
+    width: 2px;
+    height: calc(100% + 1rem);
+    background-color: var(--gotr-light-grey);
+}
+
+.timeline-item:last-child::after {
+    display: none;
+}
+
+.time {
+    font-weight: 700;
+    color: var(--gotr-purple);
+    min-width: 80px;
+}
+
+.activity h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-black);
+}
+
+.activity p {
+    color: #666;
+    margin: 0;
+}
+
+/* Lesson Materials */
+.lesson-materials {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.lesson-materials h4 {
+    margin-bottom: 1rem;
+    color: var(--gotr-purple);
+}
+
+.lesson-materials ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+}
+
+.lesson-materials li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lesson-materials li::before {
+    content: '✓';
+    color: var(--gotr-green);
+    font-weight: 700;
+}
+
+/* Action Section */
+.action-section {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.action-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.availability-check h3 {
+    color: var(--gotr-purple);
+    margin-bottom: 0.5rem;
+}
+
+.availability-check p {
+    color: #666;
+    margin: 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-accept {
+    background-color: var(--gotr-green);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-accept:hover {
+    background-color: #5fa033;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 181, 68, 0.3);
+}
+
+.btn-decline {
+    background-color: transparent;
+    color: #999;
+    border: 2px solid #ddd;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-decline:hover {
+    border-color: #999;
+    color: #666;
+}
+
+/* Share Section */
+.share-section {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gotr-light-grey);
+}
+
+.share-section p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.btn-share {
+    background-color: var(--gotr-purple);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-share:hover {
+    background-color: #5a3470;
+}
+
+/* Nearby Volunteers */
+.nearby-volunteers {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nearby-volunteers h3 {
+    color: var(--gotr-purple);
+    margin-bottom: 1.5rem;
+}
+
+.volunteer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.volunteer-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.volunteer-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.volunteer-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.volunteer-info .name {
+    font-weight: 700;
+    color: var(--text-black);
+}
+
+.volunteer-info .distance {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status.pending {
+    background-color: var(--gotr-tan);
+    color: var(--gotr-gold);
+}
+
+.status.unavailable {
+    background-color: #f3f4f6;
+    color: #999;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: var(--gotr-green);
+    margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+    color: var(--gotr-purple);
+    margin-bottom: 1rem;
+}
+
+.confirmation-details {
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.confirmation-details ul {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.confirmation-details li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.confirmation-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gotr-green);
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .coverage-detail-container {
+        padding: 0 0.5rem;
+        margin-top: 70px;
+    }
+    
+    .back-btn {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Header */
+    .coverage-header-detail {
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .header-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .urgency-info {
+        gap: 1rem;
+    }
+    
+    .urgency-badge-large {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .time-remaining {
+        font-size: 1rem;
+    }
+    
+    /* Details Grid */
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .detail-card {
+        padding: 1.5rem;
+    }
+    
+    .detail-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    /* Map */
+    .map-preview img {
+        height: 150px;
+    }
+    
+    /* Timeline */
+    .lesson-timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-item {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .time {
+        font-size: 0.875rem;
+        min-width: 60px;
+    }
+    
+    .activity h4 {
+        font-size: 1rem;
+    }
+    
+    .activity p {
+        font-size: 0.875rem;
+    }
+    
+    /* Materials */
+    .lesson-materials {
+        padding: 1rem;
+    }
+    
+    .lesson-materials ul {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Action Section */
+    .action-section {
+        padding: 1.5rem;
+    }
+    
+    .action-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .availability-check h3 {
+        font-size: 1.25rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+    
+    .btn-accept,
+    .btn-decline {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.875rem;
+    }
+    
+    /* Share Section */
+    .share-section {
+        padding-top: 1.5rem;
+    }
+    
+    /* Nearby Volunteers */
+    .nearby-volunteers {
+        padding: 1.5rem;
+    }
+    
+    .volunteer-item {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+    
+    .volunteer-item img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .volunteer-info .name {
+        font-size: 0.875rem;
+    }
+    
+    .volunteer-info .distance {
+        font-size: 0.75rem;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 2rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .success-icon {
+        font-size: 3rem;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coverage-header-detail {
+        padding: 1.5rem 1rem;
+    }
+    
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .urgency-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .detail-card {
+        padding: 1rem;
+    }
+    
+    .team-notes {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    .requirement-item {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .btn-renew {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+    
+    .timeline-item::before {
+        left: -1.5rem;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .timeline-item::after {
+        left: -21px;
+    }
+}

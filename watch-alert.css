@@ -1,0 +1,329 @@
+/* Watch Alert Styles */
+:root {
+    --gotr-pink: #c5289b;
+    --gotr-purple: #6d3f84;
+    --gotr-teal: #01AB8E;
+    --gotr-green: #6fb544;
+    --gotr-gold: #feb81d;
+    --gotr-tan: #ffecca;
+    --gotr-light-grey: #eaeaea;
+    --text-black: #1e1e1e;
+    --text-white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+}
+
+/* Watch Container */
+.watch-container {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+/* Watch Frame - Apple Watch Style */
+.watch-frame {
+    width: 324px;
+    height: 394px;
+    background: #1d1d1f;
+    border-radius: 60px;
+    padding: 8px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 2px #333,
+        inset 0 0 0 3px #000;
+    position: relative;
+}
+
+/* Watch Screen */
+.watch-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 52px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Digital Crown */
+.digital-crown {
+    position: absolute;
+    right: -12px;
+    top: 45%;
+    width: 8px;
+    height: 50px;
+    background: linear-gradient(to bottom, #666, #333);
+    border-radius: 4px;
+    box-shadow: 
+        inset 0 0 2px rgba(255,255,255,0.2),
+        0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Watch Bands */
+.watch-band-top,
+.watch-band-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    background: var(--gotr-pink);
+    z-index: -1;
+}
+
+.watch-band-top {
+    top: -90px;
+    border-radius: 100px 100px 20px 20px;
+}
+
+.watch-band-bottom {
+    bottom: -90px;
+    border-radius: 20px 20px 100px 100px;
+}
+
+/* Status Bar */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.status-icons i {
+    font-size: 14px;
+}
+
+/* Alert Content */
+.alert-content {
+    padding: 0 20px 20px;
+    color: white;
+}
+
+/* App Header */
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.app-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+}
+
+.app-name {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Urgent Badge */
+.urgent-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--gotr-pink);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.urgent-badge.pulse {
+    animation: pulseBadge 1s ease-in-out;
+}
+
+@keyframes pulseBadge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Main Alert */
+.alert-main h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.alert-time {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Alert Details */
+.alert-details {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #ddd;
+}
+
+.detail-item i {
+    color: var(--gotr-teal);
+    font-size: 14px;
+}
+
+/* Alert Reason */
+.alert-reason {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 16px;
+}
+
+/* Watch Actions */
+.watch-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.watch-actions button {
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-accept {
+    background: var(--gotr-green);
+    color: white;
+}
+
+.btn-accept:active {
+    transform: scale(0.95);
+}
+
+.btn-dismiss {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.btn-dismiss:active {
+    transform: scale(0.95);
+}
+
+/* Swipe Indicator */
+.swipe-indicator {
+    text-align: center;
+    color: #666;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.swipe-indicator i {
+    font-size: 12px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+
+/* Vibration Animation */
+.watch-frame.vibrating {
+    animation: vibrate 0.3s ease-in-out;
+}
+
+@keyframes vibrate {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+/* Demo Controls */
+.demo-controls {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.demo-controls h3 {
+    color: var(--gotr-purple);
+    margin: 0 0 0.5rem 0;
+}
+
+.demo-controls p {
+    color: #666;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.demo-controls button {
+    background: var(--gotr-purple);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.demo-controls button:hover {
+    background: #5a3470;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .watch-frame {
+        transform: scale(0.85);
+    }
+    
+    .demo-controls {
+        margin-top: -2rem;
+        padding: 1.5rem;
+    }
+}

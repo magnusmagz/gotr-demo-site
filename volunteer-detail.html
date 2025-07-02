@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Coverage Request - GOTR Volunteer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="volunteer-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="./gotr-logo.png" alt="Girls on the Run" class="logo">
+                <span class="platform-name">Volunteer Hub</span>
+            </div>
+            <div class="nav-user">
+                <span class="notification-badge">3</span>
+                <i class="fas fa-bell"></i>
+                <img src="https://i.pravatar.cc/40?img=5" alt="User" class="user-avatar">
+                <span class="user-name">Amanda Thompson</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="coverage-detail-container">
+        <!-- Back Button -->
+        <button class="back-btn" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </button>
+
+        <!-- Emergency Coverage Header -->
+        <div class="coverage-header-detail">
+            <div class="header-content">
+                <h1>Emergency Coverage Needed</h1>
+                <div class="urgency-info">
+                    <span class="urgency-badge-large">URGENT - 2 hours</span>
+                    <span class="time-remaining">
+                        <i class="fas fa-clock"></i> Coverage needed by 3:30 PM today
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coverage Details Grid -->
+        <div class="details-grid">
+            <!-- Location Card -->
+            <div class="detail-card">
+                <h3><i class="fas fa-map-marker-alt"></i> Location Details</h3>
+                <div class="info-row">
+                    <span class="label">School:</span>
+                    <span class="value">Riverside Elementary</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Address:</span>
+                    <span class="value">1234 River Road, Columbus, OH 43215</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Distance from you:</span>
+                    <span class="value">3.2 miles (8 min drive)</span>
+                </div>
+                <div class="map-preview">
+                    <img src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/-83.0062,40.0042,14,0/400x200?access_token=demo" alt="Map">
+                </div>
+            </div>
+
+            <!-- Team Information Card -->
+            <div class="detail-card">
+                <h3><i class="fas fa-users"></i> Team Information</h3>
+                <div class="info-row">
+                    <span class="label">Grade Level:</span>
+                    <span class="value">3rd-5th Grade</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Number of Girls:</span>
+                    <span class="value">12 participants</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Regular Coach:</span>
+                    <span class="value">Jennifer Martinez</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Session Type:</span>
+                    <span class="value">Week 8 - Empathy Lesson</span>
+                </div>
+                <div class="team-notes">
+                    <p><strong>Team Notes:</strong> This is a wonderful group of engaged girls. Two participants have peanut allergies (EpiPens in nurse's office). The team loves high-energy warm-ups!</p>
+                </div>
+            </div>
+
+            <!-- Requirements Card -->
+            <div class="detail-card">
+                <h3><i class="fas fa-clipboard-check"></i> Coverage Requirements</h3>
+                <div class="requirements-list">
+                    <div class="requirement-item checked">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Valid Background Check</span>
+                    </div>
+                    <div class="requirement-item checked">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Completed GOTR Coach Training</span>
+                    </div>
+                    <div class="requirement-item checked">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Current CPR/First Aid Certification</span>
+                    </div>
+                    <div class="requirement-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Experience with 3rd-5th grade preferred</span>
+                    </div>
+                </div>
+                <p class="requirement-note">✓ You meet all requirements for this coverage!</p>
+            </div>
+
+            <!-- Lesson Plan Card -->
+            <div class="detail-card full-width">
+                <h3><i class="fas fa-book"></i> Today's Lesson Plan</h3>
+                <div class="lesson-timeline">
+                    <div class="timeline-item">
+                        <div class="time">3:30 PM</div>
+                        <div class="activity">
+                            <h4>Opening Circle & Warm-Up</h4>
+                            <p>Energy Award voting and "Empathy Relay" warm-up activity</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">3:45 PM</div>
+                        <div class="activity">
+                            <h4>Main Lesson: Understanding Others</h4>
+                            <p>Discussion about empathy and "Walk in Their Shoes" activity</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">4:15 PM</div>
+                        <div class="activity">
+                            <h4>Practice Run</h4>
+                            <p>2-mile practice run with empathy discussion prompts</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">4:45 PM</div>
+                        <div class="activity">
+                            <h4>Closing Circle</h4>
+                            <p>Shout-outs and preview of next week's session</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-materials">
+                    <h4>Materials Provided:</h4>
+                    <ul>
+                        <li>Complete lesson plan binder</li>
+                        <li>Activity supplies in coach bag</li>
+                        <li>First aid kit</li>
+                        <li>Team roster with emergency contacts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Section -->
+        <div class="action-section">
+            <div class="action-content">
+                <div class="availability-check">
+                    <h3>Can you help inspire these girls today?</h3>
+                    <p>By accepting this coverage, you're ensuring 12 girls don't miss their GOTR experience.</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-accept" onclick="acceptCoverage()">
+                        <i class="fas fa-check"></i> Accept Coverage Request
+                    </button>
+                    <button class="btn-decline">
+                        <i class="fas fa-times"></i> Not Available
+                    </button>
+                </div>
+            </div>
+            <div class="share-section">
+                <p>Know someone who might be available?</p>
+                <button class="btn-share">
+                    <i class="fas fa-share-alt"></i> Share This Request
+                </button>
+            </div>
+        </div>
+
+        <!-- Other Available Volunteers -->
+        <div class="nearby-volunteers">
+            <h3>Other Coaches Being Notified</h3>
+            <div class="volunteer-list">
+                <div class="volunteer-item">
+                    <img src="https://i.pravatar.cc/40?img=8" alt="Volunteer">
+                    <div class="volunteer-info">
+                        <span class="name">Rachel Green</span>
+                        <span class="distance">2.1 miles away • 98% reliability</span>
+                    </div>
+                    <span class="status pending">Pending</span>
+                </div>
+                <div class="volunteer-item">
+                    <img src="https://i.pravatar.cc/40?img=12" alt="Volunteer">
+                    <div class="volunteer-info">
+                        <span class="name">Monica Chen</span>
+                        <span class="distance">4.5 miles away • 95% reliability</span>
+                    </div>
+                    <span class="status pending">Pending</span>
+                </div>
+                <div class="volunteer-item">
+                    <img src="https://i.pravatar.cc/40?img=15" alt="Volunteer">
+                    <div class="volunteer-info">
+                        <span class="name">Phoebe Williams</span>
+                        <span class="distance">5.8 miles away • 92% reliability</span>
+                    </div>
+                    <span class="status unavailable">Not Available</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>You're Amazing!</h2>
+            <p>Thank you for accepting this coverage request. The team at Riverside Elementary will be thrilled!</p>
+            <div class="confirmation-details">
+                <p><strong>What happens next:</strong></p>
+                <ul>
+                    <li>You'll receive a confirmation email with all details</li>
+                    <li>The school will be notified of your coverage</li>
+                    <li>Lesson materials will be ready at the school</li>
+                </ul>
+            </div>
+            <button class="btn-primary" onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptCoverage() {
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+            // In real app, would redirect to dashboard
+        }
+    </script>
+</body>
+</html>

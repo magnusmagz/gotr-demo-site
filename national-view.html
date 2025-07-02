@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Compliance Dashboard - GOTR Volunteer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="national-view.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-brand">
+                <img src="./gotr-logo.png" alt="Girls on the Run" class="logo">
+                <span class="platform-name">Volunteer Hub - National View</span>
+            </div>
+            <div class="nav-user">
+                <span class="notification-badge">12</span>
+                <i class="fas fa-bell"></i>
+                <img src="../../massett-april_orig.jpg" alt="User" class="user-avatar">
+                <span class="user-name">April Massett, VP</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard" style="margin-top: 60px;">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="mobile-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active"><a href="#" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-globe"></i> National Overview</a></li>
+                <li class="nav-item"><i class="fas fa-shield-alt"></i> Compliance Command</li>
+                <li class="nav-item"><a href="learning-management.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-graduation-cap"></i> Learning Management</a></li>
+                <li class="nav-item"><a href="#regional" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-map"></i> Regional Analysis</a></li>
+                <li class="nav-item"><a href="#risk" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-exclamation-triangle"></i> Risk Management</a></li>
+                <li class="nav-item"><a href="#automation" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-chart-line"></i> Predictive Analytics</a></li>
+                <li class="nav-item"><i class="fas fa-file-alt"></i> Reports</li>
+                <li class="nav-item"><i class="fas fa-cog"></i> System Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Executive Summary -->
+            <div class="executive-summary">
+                <h1>National Volunteer Compliance Dashboard</h1>
+                <p>Real-time oversight of <strong>39,287 volunteer coaches</strong> across <strong>200+ councils</strong> in all 50 states and Canada</p>
+                <div class="pinwheel-comparison">
+                    <i class="fas fa-info-circle"></i>
+                    <span>This comprehensive multi-council oversight is <strong>not available in Pinwheel</strong></span>
+                </div>
+            </div>
+
+            <!-- National Metrics -->
+            <div class="national-metrics">
+                <div class="metric-large">
+                    <div class="metric-header">
+                        <h3>Overall Compliance Rate</h3>
+                        <span class="trend up">↑ 3.2%</span>
+                    </div>
+                    <div class="metric-visual">
+                        <div class="compliance-gauge">
+                            <div class="gauge-fill" style="width: 94.2%">
+                                <span class="gauge-value">94.2%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="metric-subtitle">37,028 of 39,287 volunteers fully compliant</p>
+                </div>
+                
+                <div class="quick-stats">
+                    <div class="stat-item critical">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">287</span>
+                            <span class="stat-label">Critical Violations</span>
+                        </div>
+                    </div>
+                    <div class="stat-item warning">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">1,429</span>
+                            <span class="stat-label">Expiring This Month</span>
+                        </div>
+                    </div>
+                    <div class="stat-item success">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">35,812</span>
+                            <span class="stat-label">Fully Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Compliance Map -->
+            <div class="section" id="regional">
+                <h2>Regional Compliance Overview</h2>
+                <div class="regional-grid">
+                    <div class="region-card eastern">
+                        <h3>Eastern Region</h3>
+                        <div class="region-director">Dir: Maria Hernandez</div>
+                        <div class="region-stats">
+                            <div class="region-metric">
+                                <span class="metric-label">Compliance Rate</span>
+                                <span class="metric-value green">96.3%</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Councils</span>
+                                <span class="metric-value">52</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Volunteers</span>
+                                <span class="metric-value">11,234</span>
+                            </div>
+                        </div>
+                        <div class="compliance-breakdown">
+                            <div class="breakdown-item">
+                                <span>Background Checks</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 98%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Training Current</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 94%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-card central">
+                        <h3>Central Region</h3>
+                        <div class="region-director">Dir: Jennifer Thompson</div>
+                        <div class="region-stats">
+                            <div class="region-metric">
+                                <span class="metric-label">Compliance Rate</span>
+                                <span class="metric-value gold">92.8%</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Councils</span>
+                                <span class="metric-value">48</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Volunteers</span>
+                                <span class="metric-value">9,876</span>
+                            </div>
+                        </div>
+                        <div class="compliance-breakdown">
+                            <div class="breakdown-item">
+                                <span>Background Checks</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 93%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Training Current</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 91%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-card western">
+                        <h3>Western Region</h3>
+                        <div class="region-director">Dir: Sarah Kim</div>
+                        <div class="region-stats">
+                            <div class="region-metric">
+                                <span class="metric-label">Compliance Rate</span>
+                                <span class="metric-value green">95.1%</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Councils</span>
+                                <span class="metric-value">56</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Volunteers</span>
+                                <span class="metric-value">10,456</span>
+                            </div>
+                        </div>
+                        <div class="compliance-breakdown">
+                            <div class="breakdown-item">
+                                <span>Background Checks</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 97%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Training Current</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 93%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-card southern">
+                        <h3>Southern Region</h3>
+                        <div class="region-director">Dir: Ashley Davis</div>
+                        <div class="region-stats">
+                            <div class="region-metric">
+                                <span class="metric-label">Compliance Rate</span>
+                                <span class="metric-value warning">89.7%</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Councils</span>
+                                <span class="metric-value">44</span>
+                            </div>
+                            <div class="region-metric">
+                                <span class="metric-label">Volunteers</span>
+                                <span class="metric-value">7,721</span>
+                            </div>
+                        </div>
+                        <div class="compliance-breakdown">
+                            <div class="breakdown-item">
+                                <span>Background Checks</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Training Current</span>
+                                <div class="mini-progress">
+                                    <div class="mini-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Management Dashboard -->
+            <div class="section" id="risk">
+                <h2>Predictive Risk Analytics</h2>
+                <div class="risk-grid">
+                    <div class="risk-card high">
+                        <h3>High Risk Councils</h3>
+                        <div class="risk-list">
+                            <div class="risk-item">
+                                <span class="council-name">Atlanta Metro Council</span>
+                                <span class="risk-factors">32 expiring certs, 15% below target</span>
+                                <button class="btn-action">View Action Plan</button>
+                                <div class="risk-volunteers">
+                                    <p style="font-size: 0.875rem; color: #666; margin: 0.5rem 0;">High-risk volunteers:</p>
+                                    <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Sarah Johnson (3 overdue)</a><br>
+                                    <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Michael Chen (2 expiring)</a><br>
+                                    <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">+ 12 more volunteers</a>
+                                </div>
+                            </div>
+                            <div class="risk-item">
+                                <span class="council-name">Houston Council</span>
+                                <span class="risk-factors">Background check backlog, 87% compliance</span>
+                                <button class="btn-action">View Action Plan</button>
+                                <div class="risk-volunteers">
+                                    <p style="font-size: 0.875rem; color: #666; margin: 0.5rem 0;">Pending background checks:</p>
+                                    <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Amanda Rodriguez (14 days)</a><br>
+                                    <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• James Wilson (21 days)</a><br>
+                                    <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">+ 8 more volunteers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-card medium">
+                        <h3>Upcoming Renewal Surge</h3>
+                        <div class="renewal-forecast">
+                            <div class="forecast-item">
+                                <span class="month">March 2025</span>
+                                <span class="count">1,429 renewals</span>
+                                <div class="forecast-bar">
+                                    <div class="forecast-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="forecast-item">
+                                <span class="month">April 2025</span>
+                                <span class="count">2,156 renewals</span>
+                                <div class="forecast-bar">
+                                    <div class="forecast-fill warning" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="forecast-item">
+                                <span class="month">May 2025</span>
+                                <span class="count">897 renewals</span>
+                                <div class="forecast-bar">
+                                    <div class="forecast-fill" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automated Actions -->
+            <div class="section" id="automation">
+                <h2>Automated Compliance Actions This Week</h2>
+                <div class="automation-summary">
+                    <div class="automation-stat">
+                        <i class="fas fa-paper-plane"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">3,847</span>
+                            <span class="automation-label">Renewal Reminders Sent</span>
+                        </div>
+                    </div>
+                    <div class="automation-stat">
+                        <i class="fas fa-sync"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">892</span>
+                            <span class="automation-label">Background Checks Initiated</span>
+                        </div>
+                    </div>
+                    <div class="automation-stat">
+                        <i class="fas fa-user-check"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">1,234</span>
+                            <span class="automation-label">Certifications Auto-Verified</span>
+                        </div>
+                    </div>
+                    <div class="automation-stat">
+                        <i class="fas fa-ban"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">47</span>
+                            <span class="automation-label">Non-Compliant Deactivated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="toggleMobileMenu()"></div>
+
+    <script>
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('mobile-open');
+        }
+
+        // Close sidebar when clicking on a nav item on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.getElementById('sidebar').classList.remove('mobile-open');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

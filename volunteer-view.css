@@ -1,0 +1,689 @@
+/* Volunteer View Specific Styles */
+
+/* Volunteer Sidebar */
+.volunteer-sidebar {
+    background-color: var(--gotr-pink);
+}
+
+.volunteer-sidebar .nav-item:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+.volunteer-sidebar .nav-item.active {
+    background-color: var(--gotr-purple);
+}
+
+/* Hero Section */
+.volunteer-hero {
+    background: linear-gradient(135deg, var(--gotr-pink), var(--gotr-purple));
+    color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.hero-stat {
+    text-align: center;
+    background-color: rgba(255,255,255,0.15);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 900;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.action-btn.primary {
+    background-color: var(--gotr-teal);
+    color: white;
+}
+
+.action-btn.primary:hover {
+    background-color: #018b72;
+    transform: translateY(-2px);
+}
+
+.action-btn.secondary {
+    background-color: white;
+    color: var(--gotr-purple);
+    border: 2px solid var(--gotr-purple);
+}
+
+.action-btn.secondary:hover {
+    background-color: var(--gotr-purple);
+    color: white;
+}
+
+/* Sessions Grid */
+.sessions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.session-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.session-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.session-card.today {
+    border: 2px solid var(--gotr-pink);
+}
+
+.session-date {
+    background-color: var(--gotr-purple);
+    color: white;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+}
+
+.session-card.today .session-date {
+    background-color: var(--gotr-pink);
+}
+
+.day {
+    font-weight: 900;
+    font-size: 1.125rem;
+}
+
+.time {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.session-details {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.session-details h3 {
+    color: var(--gotr-purple);
+    margin-bottom: 1rem;
+}
+
+.session-details p {
+    margin: 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.session-details i {
+    width: 20px;
+    color: var(--gotr-pink);
+}
+
+.session-actions {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-left: 1px solid var(--gotr-light-grey);
+}
+
+/* Certification Status */
+.cert-status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.cert-status-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.cert-status-card.current {
+    border-left: 4px solid var(--gotr-green);
+}
+
+.cert-status-card.expiring {
+    border-left: 4px solid var(--gotr-gold);
+    background-color: #fffbf0;
+}
+
+.cert-icon {
+    font-size: 2rem;
+}
+
+.cert-status-card.current .cert-icon {
+    color: var(--gotr-green);
+}
+
+.cert-status-card.expiring .cert-icon {
+    color: var(--gotr-gold);
+}
+
+.cert-info {
+    flex: 1;
+}
+
+.cert-info h4 {
+    color: var(--gotr-purple);
+    margin-bottom: 0.5rem;
+}
+
+.cert-info p {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
+.cert-progress {
+    height: 6px;
+    background-color: var(--gotr-light-grey);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.cert-progress-fill {
+    height: 100%;
+    background-color: var(--gotr-green);
+    transition: width 0.5s ease;
+}
+
+.cert-progress-fill.warning {
+    background-color: var(--gotr-gold);
+}
+
+.btn-renew {
+    margin-top: 0.75rem;
+    background-color: var(--gotr-gold);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+/* Coverage Opportunities */
+.coverage-badge {
+    background-color: var(--gotr-pink);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.coverage-opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.coverage-opp-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.coverage-opp-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.opp-urgency {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--gotr-light-grey);
+    color: #666;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.opp-urgency.urgent {
+    background-color: var(--gotr-pink);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.coverage-opp-card h4 {
+    color: var(--gotr-purple);
+    margin-bottom: 1rem;
+}
+
+.opp-details {
+    margin-bottom: 1rem;
+}
+
+.opp-details p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.opp-details i {
+    width: 20px;
+    color: var(--gotr-pink);
+}
+
+.opp-reason {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--gotr-tan);
+    border-radius: 8px;
+}
+
+.btn-accept-coverage {
+    width: 100%;
+    background-color: var(--gotr-green);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-accept-coverage:hover {
+    background-color: #5fa033;
+    transform: translateY(-1px);
+}
+
+.btn-consider {
+    width: 100%;
+    background-color: transparent;
+    color: var(--gotr-purple);
+    border: 2px solid var(--gotr-purple);
+    padding: 1rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-consider:hover {
+    background-color: var(--gotr-purple);
+    color: white;
+}
+
+/* Impact Grid */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.impact-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.impact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.impact-icon.pink {
+    background-color: var(--gotr-pink);
+}
+
+.impact-icon.purple {
+    background-color: var(--gotr-purple);
+}
+
+.impact-icon.teal {
+    background-color: var(--gotr-teal);
+}
+
+.impact-icon.gold {
+    background-color: var(--gotr-gold);
+}
+
+.impact-content h3 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.impact-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--gotr-purple);
+}
+
+.impact-detail {
+    font-size: 0.875rem;
+    color: #999;
+}
+
+/* Recognition Banner */
+.recognition-banner {
+    background: linear-gradient(135deg, var(--gotr-gold), #ffc947);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.recognition-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.recognition-content i {
+    font-size: 3rem;
+}
+
+.recognition-content h3 {
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.recognition-content p {
+    opacity: 0.95;
+}
+
+.btn-share-achievement {
+    background-color: white;
+    color: var(--gotr-gold);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-share-achievement:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.view-all {
+    color: var(--gotr-purple);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.view-all:hover {
+    color: var(--gotr-pink);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .volunteer-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero Section */
+    .volunteer-hero {
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-stat {
+        padding: 1rem;
+        min-width: 100px;
+    }
+    
+    .stat-icon {
+        font-size: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    /* Quick Actions */
+    .quick-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .action-btn {
+        padding: 0.875rem 1rem;
+    }
+    
+    /* Sessions */
+    .sessions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .session-card {
+        flex-direction: column;
+    }
+    
+    .session-date {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .session-actions {
+        flex-direction: row;
+        padding: 1rem;
+        border-left: none;
+        border-top: 1px solid var(--gotr-light-grey);
+    }
+    
+    /* Certifications */
+    .cert-status-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cert-status-card {
+        padding: 1rem;
+    }
+    
+    .cert-icon {
+        font-size: 1.5rem;
+    }
+    
+    /* Coverage */
+    .coverage-opp-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coverage-opp-card {
+        padding: 1.5rem;
+    }
+    
+    /* Impact */
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .impact-card {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .impact-number {
+        font-size: 1.5rem;
+    }
+    
+    /* Recognition */
+    .recognition-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .recognition-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .recognition-content i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-hero {
+        padding: 1.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-stats {
+        gap: 0.5rem;
+    }
+    
+    .hero-stat {
+        flex: 1;
+        min-width: 90px;
+        padding: 0.75rem;
+    }
+    
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem;
+    }
+    
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coverage-badge {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+}

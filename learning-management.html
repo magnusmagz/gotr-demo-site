@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Management - GOTR Volunteer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="learning-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-brand">
+                <img src="./gotr-logo.png" alt="Girls on the Run" class="logo">
+                <span class="platform-name">Volunteer Hub - Learning Management</span>
+            </div>
+            <div class="nav-user">
+                <span class="notification-badge">5</span>
+                <i class="fas fa-bell"></i>
+                <img src="https://i.pravatar.cc/40?img=12" alt="User" class="user-avatar">
+                <span class="user-name">Training Admin</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard" style="margin-top: 60px;">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="mobile-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="national-view.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-globe"></i> National Overview</a></li>
+                <li class="nav-item"><i class="fas fa-shield-alt"></i> Compliance Command</li>
+                <li class="nav-item active"><i class="fas fa-graduation-cap"></i> Learning Management</li>
+                <li class="nav-item"><i class="fas fa-map"></i> Regional Analysis</li>
+                <li class="nav-item"><i class="fas fa-exclamation-triangle"></i> Risk Management</li>
+                <li class="nav-item"><i class="fas fa-chart-line"></i> Predictive Analytics</li>
+                <li class="nav-item"><i class="fas fa-file-alt"></i> Reports</li>
+                <li class="nav-item"><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Learning Overview -->
+            <div class="learning-header">
+                <h1>Volunteer Training & Compliance Dashboard</h1>
+                <p>Track and manage training progress for <strong>39,287 volunteers</strong> across all councils</p>
+            </div>
+
+            <!-- Training Compliance Summary -->
+            <div class="training-metrics">
+                <div class="metric-large">
+                    <div class="metric-header">
+                        <h3>Overall Training Compliance</h3>
+                        <span class="trend up">↑ 4.1%</span>
+                    </div>
+                    <div class="metric-visual">
+                        <div class="compliance-gauge">
+                            <div class="gauge-fill" style="width: 91.3%">
+                                <span class="gauge-value">91.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="metric-subtitle">35,859 of 39,287 volunteers have completed required training</p>
+                </div>
+                
+                <div class="quick-stats">
+                    <div class="stat-item critical">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">428</span>
+                            <span class="stat-label">Overdue Training</span>
+                        </div>
+                    </div>
+                    <div class="stat-item warning">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">1,847</span>
+                            <span class="stat-label">Due Within 30 Days</span>
+                        </div>
+                    </div>
+                    <div class="stat-item success">
+                        <i class="fas fa-trophy"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">2,156</span>
+                            <span class="stat-label">Completed This Month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Required Training Modules -->
+            <div class="section">
+                <h2>Required Training Modules - Risk Analysis</h2>
+                <div class="training-grid">
+                    <div class="training-card high-risk">
+                        <div class="training-header">
+                            <h3>GOTR Coach Fundamentals</h3>
+                            <span class="risk-badge critical">High Risk</span>
+                        </div>
+                        <div class="training-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Completion Rate</span>
+                                <span class="stat-value">87.2%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill critical" style="width: 87.2%"></div>
+                            </div>
+                        </div>
+                        <div class="training-details">
+                            <p><i class="fas fa-users"></i> 4,876 volunteers pending</p>
+                            <p><i class="fas fa-exclamation-circle"></i> 328 overdue (cannot coach)</p>
+                            <p><i class="fas fa-clock"></i> Average completion: 2.5 hours</p>
+                        </div>
+                        <div class="training-actions">
+                            <button class="btn-action">Send Reminders</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="training-card medium-risk">
+                        <div class="training-header">
+                            <h3>Mandated Reporter Training</h3>
+                            <span class="risk-badge warning">Medium Risk</span>
+                        </div>
+                        <div class="training-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Completion Rate</span>
+                                <span class="stat-value">93.8%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill warning" style="width: 93.8%"></div>
+                            </div>
+                        </div>
+                        <div class="training-details">
+                            <p><i class="fas fa-users"></i> 2,436 volunteers pending</p>
+                            <p><i class="fas fa-exclamation-triangle"></i> 156 due within 30 days</p>
+                            <p><i class="fas fa-clock"></i> Average completion: 45 minutes</p>
+                        </div>
+                        <div class="training-actions">
+                            <button class="btn-action">Launch Campaign</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="training-card low-risk">
+                        <div class="training-header">
+                            <h3>Safety & Risk Management</h3>
+                            <span class="risk-badge success">Low Risk</span>
+                        </div>
+                        <div class="training-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Completion Rate</span>
+                                <span class="stat-value">96.4%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 96.4%"></div>
+                            </div>
+                        </div>
+                        <div class="training-details">
+                            <p><i class="fas fa-users"></i> 1,414 volunteers pending</p>
+                            <p><i class="fas fa-check-circle"></i> On track for 100% by deadline</p>
+                            <p><i class="fas fa-clock"></i> Average completion: 1 hour</p>
+                        </div>
+                        <div class="training-actions">
+                            <button class="btn-secondary">View Report</button>
+                        </div>
+                    </div>
+
+                    <div class="training-card medium-risk">
+                        <div class="training-header">
+                            <h3>Diversity, Equity & Inclusion</h3>
+                            <span class="risk-badge warning">Medium Risk</span>
+                        </div>
+                        <div class="training-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Completion Rate</span>
+                                <span class="stat-value">89.7%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill warning" style="width: 89.7%"></div>
+                            </div>
+                        </div>
+                        <div class="training-details">
+                            <p><i class="fas fa-users"></i> 4,045 volunteers pending</p>
+                            <p><i class="fas fa-chart-line"></i> Trending upward (+12% this month)</p>
+                            <p><i class="fas fa-clock"></i> Average completion: 1.5 hours</p>
+                        </div>
+                        <div class="training-actions">
+                            <button class="btn-action">Boost Engagement</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Training Performance -->
+            <div class="section">
+                <h2>Regional Training Performance</h2>
+                <div class="regional-training-grid">
+                    <div class="region-training-card">
+                        <h3>Eastern Region</h3>
+                        <div class="training-modules">
+                            <div class="module-row">
+                                <span class="module-name">Coach Fundamentals</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 94%"></div>
+                                </div>
+                                <span class="module-percent">94%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Mandated Reporter</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 96%"></div>
+                                </div>
+                                <span class="module-percent">96%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Safety Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 98%"></div>
+                                </div>
+                                <span class="module-percent">98%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">DEI Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 91%"></div>
+                                </div>
+                                <span class="module-percent">91%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-training-card">
+                        <h3>Central Region</h3>
+                        <div class="training-modules">
+                            <div class="module-row">
+                                <span class="module-name">Coach Fundamentals</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill warning" style="width: 88%"></div>
+                                </div>
+                                <span class="module-percent">88%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Mandated Reporter</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 92%"></div>
+                                </div>
+                                <span class="module-percent">92%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Safety Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                                <span class="module-percent">95%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">DEI Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill warning" style="width: 86%"></div>
+                                </div>
+                                <span class="module-percent">86%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-training-card">
+                        <h3>Western Region</h3>
+                        <div class="training-modules">
+                            <div class="module-row">
+                                <span class="module-name">Coach Fundamentals</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 92%"></div>
+                                </div>
+                                <span class="module-percent">92%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Mandated Reporter</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                                <span class="module-percent">95%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Safety Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 97%"></div>
+                                </div>
+                                <span class="module-percent">97%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">DEI Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <span class="module-percent">90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-training-card">
+                        <h3>Southern Region</h3>
+                        <div class="training-modules">
+                            <div class="module-row">
+                                <span class="module-name">Coach Fundamentals</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill critical" style="width: 82%"></div>
+                                </div>
+                                <span class="module-percent">82%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Mandated Reporter</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill warning" style="width: 89%"></div>
+                                </div>
+                                <span class="module-percent">89%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">Safety Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill" style="width: 94%"></div>
+                                </div>
+                                <span class="module-percent">94%</span>
+                            </div>
+                            <div class="module-row">
+                                <span class="module-name">DEI Training</span>
+                                <div class="module-progress">
+                                    <div class="progress-fill critical" style="width: 83%"></div>
+                                </div>
+                                <span class="module-percent">83%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- High Risk Volunteers -->
+            <div class="section">
+                <h2>High-Risk Training Gaps</h2>
+                <div class="risk-alert-banner">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="risk-content">
+                        <h3>428 volunteers are non-compliant with required training</h3>
+                        <p>These volunteers cannot participate in coaching activities until training is completed</p>
+                    </div>
+                    <button class="btn-urgent">View Full List</button>
+                </div>
+
+                <div class="high-risk-grid">
+                    <div class="risk-volunteer-card">
+                        <div class="volunteer-info">
+                            <h4>Atlanta Metro Council</h4>
+                            <p class="volunteer-count">47 volunteers overdue</p>
+                        </div>
+                        <div class="missing-modules">
+                            <span class="module-tag critical">Coach Fundamentals (23)</span>
+                            <span class="module-tag warning">Mandated Reporter (18)</span>
+                            <span class="module-tag">DEI (6)</span>
+                        </div>
+                        <div class="volunteer-examples">
+                            <p style="font-size: 0.875rem; color: #666; margin: 0.75rem 0 0.5rem 0;">Examples:</p>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Sarah Johnson (3 modules overdue)</a><br>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Lisa Martinez (2 modules overdue)</a><br>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• View all 47 volunteers →</a>
+                        </div>
+                        <button class="btn-action-small">Send Bulk Reminder</button>
+                    </div>
+
+                    <div class="risk-volunteer-card">
+                        <div class="volunteer-info">
+                            <h4>Houston Council</h4>
+                            <p class="volunteer-count">38 volunteers overdue</p>
+                        </div>
+                        <div class="missing-modules">
+                            <span class="module-tag critical">Coach Fundamentals (19)</span>
+                            <span class="module-tag warning">Safety Training (11)</span>
+                            <span class="module-tag">DEI (8)</span>
+                        </div>
+                        <div class="volunteer-examples">
+                            <p style="font-size: 0.875rem; color: #666; margin: 0.75rem 0 0.5rem 0;">Examples:</p>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• David Thompson (all modules overdue)</a><br>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Maria Garcia (2 modules overdue)</a><br>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• View all 38 volunteers →</a>
+                        </div>
+                        <button class="btn-action-small">Send Bulk Reminder</button>
+                    </div>
+
+                    <div class="risk-volunteer-card">
+                        <div class="volunteer-info">
+                            <h4>Phoenix Council</h4>
+                            <p class="volunteer-count">29 volunteers overdue</p>
+                        </div>
+                        <div class="missing-modules">
+                            <span class="module-tag critical">Coach Fundamentals (15)</span>
+                            <span class="module-tag warning">Mandated Reporter (14)</span>
+                        </div>
+                        <div class="volunteer-examples">
+                            <p style="font-size: 0.875rem; color: #666; margin: 0.75rem 0 0.5rem 0;">Examples:</p>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Jennifer Lee (2 modules overdue)</a><br>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• Robert Davis (1 module overdue)</a><br>
+                            <a href="volunteer-profile.html" style="color: var(--gotr-purple); text-decoration: none; font-size: 0.875rem;">• View all 29 volunteers →</a>
+                        </div>
+                        <button class="btn-action-small">Send Bulk Reminder</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Automation -->
+            <div class="section">
+                <h2>Automated Training Management</h2>
+                <div class="automation-summary">
+                    <div class="automation-stat">
+                        <i class="fas fa-envelope"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">5,234</span>
+                            <span class="automation-label">Training Reminders Sent</span>
+                        </div>
+                    </div>
+                    <div class="automation-stat">
+                        <i class="fas fa-user-graduate"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">2,156</span>
+                            <span class="automation-label">Completions This Month</span>
+                        </div>
+                    </div>
+                    <div class="automation-stat">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">847</span>
+                            <span class="automation-label">Auto-Scheduled Sessions</span>
+                        </div>
+                    </div>
+                    <div class="automation-stat">
+                        <i class="fas fa-trophy"></i>
+                        <div class="automation-content">
+                            <span class="automation-number">1,923</span>
+                            <span class="automation-label">Certificates Issued</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="toggleMobileMenu()"></div>
+
+    <script>
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('mobile-open');
+        }
+
+        // Close sidebar when clicking on a nav item on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.getElementById('sidebar').classList.remove('mobile-open');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

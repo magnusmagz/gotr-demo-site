@@ -1,0 +1,645 @@
+/* Learning Management Specific Styles */
+
+/* Navigation link fixes */
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-item a i {
+    margin-right: 0.75rem;
+}
+
+.learning-header {
+    background: linear-gradient(135deg, var(--gotr-teal), var(--gotr-purple));
+    color: white;
+    padding: 3.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    margin-top: 80px;
+    box-shadow: 0 4px 12px rgba(109, 63, 132, 0.3);
+}
+
+.learning-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.learning-header p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+/* Training Metrics */
+.training-metrics {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Reuse styles from national-view.css */
+.metric-large {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.trend {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.trend.up {
+    color: var(--gotr-green);
+}
+
+.compliance-gauge {
+    background-color: var(--gotr-light-grey);
+    height: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gotr-teal), var(--gotr-green));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    transition: width 1s ease;
+}
+
+.gauge-value {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+}
+
+.metric-subtitle {
+    margin-top: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Quick Stats */
+.quick-stats {
+    display: grid;
+    gap: 1rem;
+}
+
+.stat-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateX(5px);
+}
+
+.stat-item i {
+    font-size: 2rem;
+}
+
+.stat-item.critical i {
+    color: var(--gotr-pink);
+}
+
+.stat-item.warning i {
+    color: var(--gotr-gold);
+}
+
+.stat-item.success i {
+    color: var(--gotr-green);
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--text-black);
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* Training Grid */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.training-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid;
+    transition: all 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.training-card.high-risk {
+    border-top-color: var(--gotr-pink);
+}
+
+.training-card.medium-risk {
+    border-top-color: var(--gotr-gold);
+}
+
+.training-card.low-risk {
+    border-top-color: var(--gotr-green);
+}
+
+.training-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.training-header h3 {
+    color: var(--gotr-purple);
+    margin-bottom: 0;
+}
+
+.risk-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.risk-badge.critical {
+    background-color: #fef2f2;
+    color: var(--gotr-pink);
+}
+
+.risk-badge.warning {
+    background-color: #fef9e7;
+    color: var(--gotr-gold);
+}
+
+.risk-badge.success {
+    background-color: #e8f5f0;
+    color: var(--gotr-green);
+}
+
+.training-stats {
+    margin-bottom: 1.5rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.stat-row .stat-label {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.stat-row .stat-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-black);
+}
+
+.progress-bar {
+    height: 12px;
+    background-color: var(--gotr-light-grey);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--gotr-teal);
+    transition: width 0.5s ease;
+}
+
+.progress-fill.critical {
+    background-color: var(--gotr-pink);
+}
+
+.progress-fill.warning {
+    background-color: var(--gotr-gold);
+}
+
+.progress-fill.success {
+    background-color: var(--gotr-green);
+}
+
+.training-details {
+    margin-bottom: 1.5rem;
+}
+
+.training-details p {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.training-details i {
+    color: var(--gotr-purple);
+    margin-right: 0.5rem;
+}
+
+.training-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-action {
+    background-color: var(--gotr-purple);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #5a2f70;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--gotr-purple);
+    border: 2px solid var(--gotr-purple);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--gotr-purple);
+    color: white;
+}
+
+/* Regional Training Grid */
+.regional-training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.region-training-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.region-training-card h3 {
+    color: var(--gotr-purple);
+    margin-bottom: 1rem;
+}
+
+.training-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.module-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 40px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.module-name {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.module-progress {
+    height: 8px;
+    background-color: var(--gotr-light-grey);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.module-progress .progress-fill {
+    height: 100%;
+    background-color: var(--gotr-teal);
+}
+
+.module-progress .progress-fill.warning {
+    background-color: var(--gotr-gold);
+}
+
+.module-progress .progress-fill.critical {
+    background-color: var(--gotr-pink);
+}
+
+.module-percent {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* Risk Alert Banner */
+.risk-alert-banner {
+    background-color: #fef2f2;
+    border: 2px solid var(--gotr-pink);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.risk-alert-banner i {
+    font-size: 3rem;
+    color: var(--gotr-pink);
+}
+
+.risk-content h3 {
+    color: var(--gotr-pink);
+    margin-bottom: 0.5rem;
+}
+
+.risk-content p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+.btn-urgent {
+    background-color: var(--gotr-pink);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.btn-urgent:hover {
+    background-color: #a31d7f;
+}
+
+/* High Risk Grid */
+.high-risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.risk-volunteer-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--gotr-pink);
+}
+
+.volunteer-info h4 {
+    color: var(--gotr-purple);
+    margin-bottom: 0.5rem;
+}
+
+.volunteer-count {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.missing-modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.module-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: var(--gotr-light-grey);
+    color: #666;
+}
+
+.module-tag.critical {
+    background-color: #fef2f2;
+    color: var(--gotr-pink);
+}
+
+.module-tag.warning {
+    background-color: #fef9e7;
+    color: var(--gotr-gold);
+}
+
+.btn-action-small {
+    background-color: var(--gotr-purple);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-action-small:hover {
+    background-color: #5a2f70;
+}
+
+/* Automation Summary */
+.automation-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.automation-stat {
+    background: linear-gradient(135deg, #f8f9fa, white);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.automation-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.automation-stat i {
+    font-size: 2.5rem;
+    color: var(--gotr-teal);
+}
+
+.automation-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.automation-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--gotr-purple);
+}
+
+.automation-label {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .training-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .regional-training-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .learning-header {
+        padding: 2rem;
+        margin-top: 70px;
+    }
+    
+    .learning-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .learning-header p {
+        font-size: 1rem;
+    }
+    
+    .metric-large {
+        padding: 1.5rem;
+    }
+    
+    .gauge-value {
+        font-size: 1.5rem;
+    }
+    
+    .stat-item {
+        padding: 1rem;
+    }
+    
+    .stat-item i {
+        font-size: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .training-card {
+        padding: 1.5rem;
+    }
+    
+    .risk-alert-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .btn-urgent {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .module-row {
+        grid-template-columns: 120px 1fr 35px;
+        font-size: 0.875rem;
+    }
+    
+    .high-risk-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .automation-stat {
+        padding: 1.5rem;
+    }
+    
+    .automation-stat i {
+        font-size: 2rem;
+    }
+    
+    .automation-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .learning-header {
+        padding: 1.5rem;
+    }
+    
+    .learning-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .training-actions {
+        flex-direction: column;
+    }
+    
+    .btn-action,
+    .btn-secondary {
+        width: 100%;
+    }
+    
+    .automation-summary {
+        grid-template-columns: 1fr;
+    }
+}

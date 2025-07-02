@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - GOTR Volunteer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="volunteer-view.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-brand">
+                <img src="./gotr-logo.png" alt="Girls on the Run" class="logo">
+                <span class="platform-name">Volunteer Hub</span>
+            </div>
+            <div class="nav-user">
+                <span class="notification-badge">2</span>
+                <i class="fas fa-bell"></i>
+                <img src="https://i.pravatar.cc/40?img=5" alt="User" class="user-avatar">
+                <span class="user-name">Amanda Thompson</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard" style="margin-top: 60px;">
+        <!-- Sidebar -->
+        <aside class="sidebar volunteer-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="mobile-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active"><i class="fas fa-home"></i> My Dashboard</li>
+                <li class="nav-item"><i class="fas fa-calendar"></i> My Schedule</li>
+                <li class="nav-item"><i class="fas fa-certificate"></i> My Certifications</li>
+                <li class="nav-item"><i class="fas fa-hands-helping"></i> Coverage Opportunities</li>
+                <li class="nav-item"><i class="fas fa-trophy"></i> My Impact</li>
+                <li class="nav-item"><i class="fas fa-book"></i> Resources</li>
+                <li class="nav-item"><i class="fas fa-user-cog"></i> Profile Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Hero -->
+            <div class="volunteer-hero">
+                <div class="hero-content">
+                    <h1>Welcome back, Amanda! 🌟</h1>
+                    <p>You've inspired <strong>450+ girls</strong> over 5 seasons. Thank you for being a star!</p>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-icon">🏃‍♀️</span>
+                        <span class="stat-number">102</span>
+                        <span class="stat-label">Sessions Coached</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-icon">⭐</span>
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Team Rating</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-icon">💜</span>
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Coverage Assists</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-btn primary">
+                    <i class="fas fa-check-circle"></i>
+                    Check In for Today
+                </button>
+                <a href="volunteer-detail.html" style="text-decoration: none;">
+                    <button class="action-btn secondary">
+                        <i class="fas fa-calendar-plus"></i>
+                        View Coverage Requests
+                    </button>
+                </a>
+                <button class="action-btn secondary">
+                    <i class="fas fa-book-open"></i>
+                    Access Lesson Plans
+                </button>
+            </div>
+
+            <!-- Upcoming Sessions -->
+            <div class="section">
+                <h2>Your Upcoming Sessions</h2>
+                <div class="sessions-grid">
+                    <div class="session-card today">
+                        <div class="session-date">
+                            <span class="day">TODAY</span>
+                            <span class="time">3:30 PM</span>
+                        </div>
+                        <div class="session-details">
+                            <h3>Riverside Elementary - 3rd-5th Grade</h3>
+                            <p><i class="fas fa-users"></i> 12 girls registered</p>
+                            <p><i class="fas fa-book"></i> Week 9: Standing Up for Myself</p>
+                            <p><i class="fas fa-running"></i> 2.5 mile practice run</p>
+                        </div>
+                        <div class="session-actions">
+                            <button class="btn-small">View Lesson Plan</button>
+                            <button class="btn-small">Team Roster</button>
+                        </div>
+                    </div>
+                    
+                    <div class="session-card">
+                        <div class="session-date">
+                            <span class="day">THU</span>
+                            <span class="time">3:30 PM</span>
+                        </div>
+                        <div class="session-details">
+                            <h3>Riverside Elementary - 3rd-5th Grade</h3>
+                            <p><i class="fas fa-users"></i> 12 girls registered</p>
+                            <p><i class="fas fa-book"></i> Week 9: Expressing Emotions</p>
+                            <p><i class="fas fa-star"></i> Energy Award Day!</p>
+                        </div>
+                        <div class="session-actions">
+                            <button class="btn-small">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification Status -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>My Certifications</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="cert-status-grid">
+                    <div class="cert-status-card current">
+                        <div class="cert-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Background Check</h4>
+                            <p>Valid until Mar 15, 2027</p>
+                            <div class="cert-progress">
+                                <div class="cert-progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-status-card current">
+                        <div class="cert-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>GOTR Coach Training</h4>
+                            <p>Valid until Dec 31, 2025</p>
+                            <div class="cert-progress">
+                                <div class="cert-progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-status-card expiring">
+                        <div class="cert-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>CPR/First Aid</h4>
+                            <p>Expires in 32 days</p>
+                            <div class="cert-progress">
+                                <div class="cert-progress-fill warning" style="width: 10%"></div>
+                            </div>
+                            <button class="btn-renew">Renew Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-status-card current">
+                        <div class="cert-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Mandated Reporter</h4>
+                            <p>Valid until Jan 1, 2026</p>
+                            <div class="cert-progress">
+                                <div class="cert-progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coverage Opportunities -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Help a Sister Coach! 💜</h2>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <span class="coverage-badge">2 opportunities near you</span>
+                        <a href="watch-alert.html" style="font-size: 0.875rem; color: var(--gotr-purple); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-watch"></i> See Watch Alert
+                        </a>
+                    </div>
+                </div>
+                <div class="coverage-opp-grid">
+                    <div class="coverage-opp-card">
+                        <div class="opp-urgency urgent">
+                            <i class="fas fa-bolt"></i> Urgent - Tomorrow
+                        </div>
+                        <h4>Lincoln Middle School needs you!</h4>
+                        <div class="opp-details">
+                            <p><i class="fas fa-map-marker-alt"></i> 2.8 miles from your location</p>
+                            <p><i class="fas fa-clock"></i> Tuesday, 4:00-5:30 PM</p>
+                            <p><i class="fas fa-users"></i> 6th-8th grade team (18 girls)</p>
+                        </div>
+                        <p class="opp-reason">Coach has a medical appointment</p>
+                        <button class="btn-accept-coverage">I Can Help!</button>
+                    </div>
+                    
+                    <div class="coverage-opp-card">
+                        <div class="opp-urgency">
+                            Next Week
+                        </div>
+                        <h4>Oakwood Elementary coverage needed</h4>
+                        <div class="opp-details">
+                            <p><i class="fas fa-map-marker-alt"></i> 5.1 miles from your location</p>
+                            <p><i class="fas fa-clock"></i> Mar 12, 3:30-5:00 PM</p>
+                            <p><i class="fas fa-users"></i> 3rd-5th grade team (15 girls)</p>
+                        </div>
+                        <p class="opp-reason">Coach attending GOTR conference</p>
+                        <button class="btn-consider">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Impact -->
+            <div class="section">
+                <h2>Your Impact This Season</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon pink">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="impact-content">
+                            <h3>Girls Inspired</h3>
+                            <p class="impact-number">36</p>
+                            <p class="impact-detail">across 2 teams</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon purple">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="impact-content">
+                            <h3>Miles Run Together</h3>
+                            <p class="impact-number">127</p>
+                            <p class="impact-detail">building confidence</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon teal">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="impact-content">
+                            <h3>Life Lessons Shared</h3>
+                            <p class="impact-number">24</p>
+                            <p class="impact-detail">empowering discussions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="impact-content">
+                            <h3>Team Shout-outs</h3>
+                            <p class="impact-number">89</p>
+                            <p class="impact-detail">celebrating each girl</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Recognition -->
+            <div class="recognition-banner">
+                <div class="recognition-content">
+                    <i class="fas fa-trophy"></i>
+                    <div>
+                        <h3>You've reached a milestone! 🎉</h3>
+                        <p>100 sessions coached - You're now a Century Star Coach!</p>
+                    </div>
+                </div>
+                <button class="btn-share-achievement">Share Achievement</button>
+            </div>
+        </main>
+    </div>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="toggleMobileMenu()"></div>
+
+    <script>
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('mobile-open');
+        }
+
+        // Close sidebar when clicking on a nav item on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.getElementById('sidebar').classList.remove('mobile-open');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

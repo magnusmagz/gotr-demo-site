@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOTR Volunteer Coordination Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-brand">
+                <img src="./gotr-logo.png" alt="Girls on the Run" class="logo">
+                <span class="platform-name">Volunteer Hub</span>
+            </div>
+            <div class="nav-user">
+                <span class="notification-badge">3</span>
+                <i class="fas fa-bell"></i>
+                <img src="../../McKenna Olson.jpg" alt="User" class="user-avatar">
+                <span class="user-name">McKenna Olson</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Emergency Coverage Alert -->
+    <div class="emergency-alert">
+        <div class="alert-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span><strong>Urgent:</strong> Coach needed at Riverside Elementary in 2 hours!</span>
+            <button class="btn-teal">View Details</button>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="mobile-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active"><i class="fas fa-home"></i> Dashboard</li>
+                <li class="nav-item"><i class="fas fa-users"></i> Volunteers</li>
+                <li class="nav-item"><i class="fas fa-calendar"></i> Schedule</li>
+                <li class="nav-item"><i class="fas fa-shield-alt"></i> Compliance</li>
+                <li class="nav-item"><i class="fas fa-bell"></i> Coverage Requests</li>
+                <li class="nav-item"><i class="fas fa-chart-line"></i> Analytics</li>
+                <li class="nav-item"><i class="fas fa-trophy"></i> Recognition</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h1>Welcome back, McKenna!</h1>
+                <p>Your Central Ohio Council has <strong>287 active volunteers</strong> ready to inspire girls to be joyful, healthy and confident.</p>
+                <div class="view-switcher">
+                    <button class="view-btn active">Council View</button>
+                    <button class="view-btn" onclick="window.location.href='national-view.html'">National View</button>
+                    <button class="view-btn">Regional View</button>
+                    <button class="view-btn" onclick="window.location.href='volunteer-view.html'">Volunteer View</button>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-card pink">
+                    <div class="metric-icon"><i class="fas fa-users"></i></div>
+                    <div class="metric-content">
+                        <h3>Active Coaches</h3>
+                        <p class="metric-value">287</p>
+                        <p class="metric-change">+12% from last season</p>
+                    </div>
+                </div>
+                <div class="metric-card purple">
+                    <div class="metric-icon"><i class="fas fa-running"></i></div>
+                    <div class="metric-content">
+                        <h3>Girls Served</h3>
+                        <p class="metric-value">1,842</p>
+                        <p class="metric-change">Impacting 73 schools</p>
+                    </div>
+                </div>
+                <div class="metric-card teal">
+                    <div class="metric-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="metric-content">
+                        <h3>Coverage Rate</h3>
+                        <p class="metric-value">98.5%</p>
+                        <p class="metric-change">Best in region!</p>
+                    </div>
+                </div>
+                <div class="metric-card gold">
+                    <div class="metric-icon"><i class="fas fa-star"></i></div>
+                    <div class="metric-content">
+                        <h3>Volunteer Satisfaction</h3>
+                        <p class="metric-value">4.8/5</p>
+                        <p class="metric-change">From 423 reviews</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Coverage Section -->
+            <div class="section">
+                <h2>Emergency Coverage Requests</h2>
+                <div class="coverage-requests">
+                    <div class="coverage-card urgent">
+                        <div class="coverage-header">
+                            <span class="urgency-badge">URGENT - 2 hours</span>
+                            <span class="location">Riverside Elementary</span>
+                        </div>
+                        <div class="coverage-details">
+                            <p><i class="fas fa-clock"></i> Today, 3:30 PM - 5:00 PM</p>
+                            <p><i class="fas fa-users"></i> 3rd-5th Grade Team (12 girls)</p>
+                            <p><i class="fas fa-info-circle"></i> Regular coach has family emergency</p>
+                        </div>
+                        <div class="coverage-actions">
+                            <button class="btn-primary">Accept Coverage</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                    <div class="coverage-card">
+                        <div class="coverage-header">
+                            <span class="urgency-badge moderate">Tomorrow</span>
+                            <span class="location">Lincoln Middle School</span>
+                        </div>
+                        <div class="coverage-details">
+                            <p><i class="fas fa-clock"></i> Tuesday, 4:00 PM - 5:30 PM</p>
+                            <p><i class="fas fa-users"></i> 6th-8th Grade Team (18 girls)</p>
+                        </div>
+                        <div class="coverage-actions">
+                            <button class="btn-primary">Accept Coverage</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Compliance Dashboard - Pinwheel Can't Do This! -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Advanced Compliance Command Center</h2>
+                    <span class="feature-badge">Not Available in Pinwheel</span>
+                </div>
+                
+                <!-- Background Check Integration - Critical Gap -->
+                <div class="compliance-feature-box">
+                    <h3><i class="fas fa-shield-alt"></i> Multi-State Background Check Management</h3>
+                    <div class="integration-status">
+                        <span class="integration-badge sterling">Sterling Volunteers Connected</span>
+                        <span class="integration-badge checkr">Checkr API Active</span>
+                    </div>
+                    <div class="background-check-grid">
+                        <div class="check-stat">
+                            <h4>Pennsylvania Volunteers</h4>
+                            <div class="check-items">
+                                <div class="check-item complete">✓ Criminal History (87/87)</div>
+                                <div class="check-item complete">✓ Child Abuse Clearance (87/87)</div>
+                                <div class="check-item warning">⚠ FBI Fingerprinting (82/87)</div>
+                            </div>
+                        </div>
+                        <div class="check-stat">
+                            <h4>California Volunteers</h4>
+                            <div class="check-items">
+                                <div class="check-item complete">✓ Live Scan Complete (45/45)</div>
+                                <div class="check-item complete">✓ DOJ/FBI Clear (45/45)</div>
+                            </div>
+                        </div>
+                        <div class="check-stat">
+                            <h4>Other States</h4>
+                            <div class="check-items">
+                                <div class="check-item complete">✓ State Requirements Met (155/155)</div>
+                                <div class="check-item complete">✓ Sex Offender Registry (155/155)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Certification Tracking -->
+                <div class="certification-grid">
+                    <h3>13+ Certification Types Tracked (vs. 2 in Pinwheel)</h3>
+                    <div class="cert-row">
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-name">Background Checks</span>
+                                <span class="cert-rate green">98%</span>
+                            </div>
+                            <div class="cert-detail">282/287 compliant • Auto-renewed via API</div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-name">GOTR Coach Training</span>
+                                <span class="cert-rate green">95%</span>
+                            </div>
+                            <div class="cert-detail">273/287 current • LMS integrated</div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-name">CPR/First Aid</span>
+                                <span class="cert-rate gold">82%</span>
+                            </div>
+                            <div class="cert-detail">235/287 current • 23 renewals pending</div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-name">Mandated Reporter</span>
+                                <span class="cert-rate green">91%</span>
+                            </div>
+                            <div class="cert-detail">261/287 complete • Annual requirement</div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-name">Child Abuse Training</span>
+                                <span class="cert-rate green">94%</span>
+                            </div>
+                            <div class="cert-detail">270/287 current • State-specific</div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-name">Concussion Awareness</span>
+                                <span class="cert-rate green">97%</span>
+                            </div>
+                            <div class="cert-detail">278/287 certified • CDC course linked</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automated Workflow Engine -->
+                <div class="workflow-section">
+                    <h3><i class="fas fa-robot"></i> Automated Compliance Workflows</h3>
+                    <div class="workflow-stats">
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><i class="fas fa-bell"></i></div>
+                            <div class="workflow-content">
+                                <h4>Smart Notifications</h4>
+                                <p>147 renewal reminders sent this month</p>
+                                <p class="workflow-detail">90, 30, 14, 7 day automated alerts</p>
+                            </div>
+                        </div>
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><i class="fas fa-sync"></i></div>
+                            <div class="workflow-content">
+                                <h4>Bulk Processing</h4>
+                                <p>38 certifications renewed in batch</p>
+                                <p class="workflow-detail">One-click renewal for similar expiry dates</p>
+                            </div>
+                        </div>
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="workflow-content">
+                                <h4>Predictive Analytics</h4>
+                                <p>12 at-risk volunteers identified</p>
+                                <p class="workflow-detail">AI predicts likely non-renewals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Impact Box -->
+                <div class="roi-impact-box">
+                    <h3>Platform Impact vs. Pinwheel</h3>
+                    <div class="roi-metrics">
+                        <div class="roi-item">
+                            <span class="roi-value">75%</span>
+                            <span class="roi-label">Admin Time Saved</span>
+                        </div>
+                        <div class="roi-item">
+                            <span class="roi-value">$525K</span>
+                            <span class="roi-label">Annual Savings</span>
+                        </div>
+                        <div class="roi-item">
+                            <span class="roi-value">6 mo</span>
+                            <span class="roi-label">ROI Timeline</span>
+                        </div>
+                        <div class="roi-item">
+                            <span class="roi-value">Zero</span>
+                            <span class="roi-label">Compliance Violations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Spotlight -->
+            <div class="section">
+                <h2>Volunteer Recognition</h2>
+                <div class="recognition-grid">
+                    <div class="recognition-card">
+                        <img src="https://i.pravatar.cc/60?img=5" alt="Volunteer" class="volunteer-photo">
+                        <h4>Amanda Thompson</h4>
+                        <p class="achievement">🏆 100 Sessions Milestone!</p>
+                        <p class="impact">Inspired 450+ girls over 5 seasons</p>
+                    </div>
+                    <div class="recognition-card">
+                        <img src="https://i.pravatar.cc/60?img=9" alt="Volunteer" class="volunteer-photo">
+                        <h4>Lisa Chen</h4>
+                        <p class="achievement">⭐ Emergency Coverage Hero</p>
+                        <p class="impact">Stepped up 8 times this season</p>
+                    </div>
+                    <div class="recognition-card">
+                        <img src="https://i.pravatar.cc/60?img=3" alt="Volunteer" class="volunteer-photo">
+                        <h4>Maria Rodriguez</h4>
+                        <p class="achievement">💜 Perfect Attendance</p>
+                        <p class="impact">Never missed a session in 2024</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Emergency Button -->
+    <button class="mobile-emergency-btn">
+        <i class="fas fa-exclamation-circle"></i>
+    </button>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="toggleMobileMenu()"></div>
+
+    <script>
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('mobile-open');
+        }
+
+        // Close sidebar when clicking on a nav item on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.getElementById('sidebar').classList.remove('mobile-open');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

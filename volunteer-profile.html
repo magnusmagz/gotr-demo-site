@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Profile - Sarah Johnson - GOTR Volunteer Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="volunteer-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-brand">
+                <img src="./gotr-logo.png" alt="Girls on the Run" class="logo">
+                <span class="platform-name">Volunteer Hub - Admin View</span>
+            </div>
+            <div class="nav-user">
+                <span class="notification-badge">5</span>
+                <i class="fas fa-bell"></i>
+                <img src="https://i.pravatar.cc/40?img=12" alt="User" class="user-avatar">
+                <span class="user-name">Admin User</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard" style="margin-top: 60px;">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="mobile-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="national-view.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-globe"></i> National Overview</a></li>
+                <li class="nav-item"><a href="learning-management.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;"><i class="fas fa-graduation-cap"></i> Learning Management</a></li>
+                <li class="nav-item active"><i class="fas fa-users"></i> Volunteer Management</li>
+                <li class="nav-item"><i class="fas fa-shield-alt"></i> Compliance Center</li>
+                <li class="nav-item"><i class="fas fa-chart-line"></i> Analytics</li>
+                <li class="nav-item"><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Back Button -->
+            <button class="back-btn" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+
+            <!-- Volunteer Header -->
+            <div class="volunteer-header">
+                <div class="volunteer-basic-info">
+                    <img src="https://i.pravatar.cc/120?img=1" alt="Sarah Johnson" class="volunteer-avatar-large">
+                    <div class="volunteer-details">
+                        <h1>Sarah Johnson</h1>
+                        <p class="volunteer-title">Lead Coach • Atlanta Metro Council</p>
+                        <div class="volunteer-tags">
+                            <span class="tag council">Atlanta Metro</span>
+                            <span class="tag role">Lead Coach</span>
+                            <span class="tag tenure">5 Years</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="volunteer-actions">
+                    <button class="btn-action">
+                        <i class="fas fa-envelope"></i> Send Reminder
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-user-edit"></i> Edit Profile
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-ban"></i> Deactivate
+                    </button>
+                </div>
+            </div>
+
+            <!-- Risk Assessment Summary -->
+            <div class="risk-assessment-card critical">
+                <div class="risk-header">
+                    <h2><i class="fas fa-exclamation-triangle"></i> High Risk - Immediate Action Required</h2>
+                    <span class="risk-score">Risk Score: 85/100</span>
+                </div>
+                <div class="risk-summary">
+                    <p>This volunteer has <strong>3 critical compliance issues</strong> that prevent them from coaching. Immediate resolution required.</p>
+                </div>
+                <div class="risk-items">
+                    <div class="risk-item">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Coach Fundamentals training overdue by 45 days</span>
+                    </div>
+                    <div class="risk-item">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Mandated Reporter certification expired</span>
+                    </div>
+                    <div class="risk-item">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Background check renewal required</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compliance & Training Status -->
+            <div class="section">
+                <h2>Compliance & Training Status</h2>
+                <div class="compliance-grid">
+                    <div class="compliance-card expired">
+                        <div class="compliance-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="compliance-info">
+                            <h4>Background Check</h4>
+                            <p class="status">Expired - 15 days ago</p>
+                            <p class="details">Last completed: Mar 15, 2023</p>
+                            <button class="btn-urgent">Initiate Renewal</button>
+                        </div>
+                    </div>
+
+                    <div class="compliance-card overdue">
+                        <div class="compliance-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="compliance-info">
+                            <h4>GOTR Coach Fundamentals</h4>
+                            <p class="status">Overdue - 45 days</p>
+                            <p class="details">Never completed</p>
+                            <button class="btn-urgent">Send Training Link</button>
+                        </div>
+                    </div>
+
+                    <div class="compliance-card expired">
+                        <div class="compliance-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="compliance-info">
+                            <h4>Mandated Reporter</h4>
+                            <p class="status">Expired - 5 days ago</p>
+                            <p class="details">Last completed: Jan 10, 2024</p>
+                            <button class="btn-urgent">Renew Certification</button>
+                        </div>
+                    </div>
+
+                    <div class="compliance-card current">
+                        <div class="compliance-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="compliance-info">
+                            <h4>CPR/First Aid</h4>
+                            <p class="status">Current</p>
+                            <p class="details">Expires: Dec 31, 2025</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Progress -->
+            <div class="section">
+                <h2>Training Module Progress</h2>
+                <div class="training-progress-list">
+                    <div class="training-module-item">
+                        <div class="module-info">
+                            <h4>GOTR Coach Fundamentals</h4>
+                            <p>Required for all coaches • 2.5 hours</p>
+                        </div>
+                        <div class="module-status overdue">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Not Started
+                        </div>
+                        <button class="btn-action-small">Send Reminder</button>
+                    </div>
+
+                    <div class="training-module-item">
+                        <div class="module-info">
+                            <h4>Diversity, Equity & Inclusion</h4>
+                            <p>Annual requirement • 1.5 hours</p>
+                        </div>
+                        <div class="module-progress">
+                            <span>Progress: 45%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill warning" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <button class="btn-secondary-small">View Progress</button>
+                    </div>
+
+                    <div class="training-module-item">
+                        <div class="module-info">
+                            <h4>Safety & Risk Management</h4>
+                            <p>Completed Oct 15, 2024</p>
+                        </div>
+                        <div class="module-status completed">
+                            <i class="fas fa-check-circle"></i>
+                            Completed
+                        </div>
+                        <button class="btn-secondary-small">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity History -->
+            <div class="section">
+                <h2>Recent Activity & Communications</h2>
+                <div class="activity-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker warning"></div>
+                        <div class="timeline-content">
+                            <h4>Training Reminder Sent</h4>
+                            <p>Automated reminder for Coach Fundamentals training</p>
+                            <span class="timeline-date">3 days ago</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker critical"></div>
+                        <div class="timeline-content">
+                            <h4>Background Check Expired</h4>
+                            <p>Background check certification expired - volunteer automatically marked inactive for coaching</p>
+                            <span class="timeline-date">15 days ago</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker info"></div>
+                        <div class="timeline-content">
+                            <h4>Season Registration</h4>
+                            <p>Registered for Spring 2025 season at Riverside Elementary</p>
+                            <span class="timeline-date">1 month ago</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker success"></div>
+                        <div class="timeline-content">
+                            <h4>Safety Training Completed</h4>
+                            <p>Successfully completed Safety & Risk Management module</p>
+                            <span class="timeline-date">2 months ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="section">
+                <h2>Volunteer Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-running"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">248</span>
+                            <span class="stat-label">Sessions Coached</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">680+</span>
+                            <span class="stat-label">Girls Impacted</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Seasons Active</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-star"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">4.8/5</span>
+                            <span class="stat-label">Team Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="toggleMobileMenu()"></div>
+
+    <script>
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('mobile-open');
+        }
+
+        // Close sidebar when clicking on a nav item on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.getElementById('sidebar').classList.remove('mobile-open');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

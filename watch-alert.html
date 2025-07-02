@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOTR Watch Alert - Coverage Request</title>
+    <link rel="stylesheet" href="watch-alert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="watch-container">
+        <!-- Apple Watch Frame -->
+        <div class="watch-frame">
+            <div class="watch-screen">
+                <!-- Status Bar -->
+                <div class="status-bar">
+                    <span class="time">10:45</span>
+                    <div class="status-icons">
+                        <i class="fas fa-wifi"></i>
+                        <span class="battery">76%</span>
+                    </div>
+                </div>
+
+                <!-- Alert Content -->
+                <div class="alert-content">
+                    <!-- App Header -->
+                    <div class="app-header">
+                        <img src="./gotr-logo.png" alt="GOTR" class="app-icon">
+                        <span class="app-name">Girls on the Run</span>
+                    </div>
+
+                    <!-- Urgent Badge -->
+                    <div class="urgent-badge">
+                        <i class="fas fa-bolt"></i> URGENT COVERAGE
+                    </div>
+
+                    <!-- Main Alert Info -->
+                    <div class="alert-main">
+                        <h1>Lincoln Middle School</h1>
+                        <p class="alert-time">Tomorrow • 4:00-5:30 PM</p>
+                    </div>
+
+                    <!-- Quick Details -->
+                    <div class="alert-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>2.8 mi away</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>18 girls (6th-8th)</span>
+                        </div>
+                    </div>
+
+                    <!-- Reason -->
+                    <div class="alert-reason">
+                        "Coach has medical appointment"
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="watch-actions">
+                        <button class="btn-accept">
+                            <i class="fas fa-check"></i>
+                            Accept
+                        </button>
+                        <button class="btn-dismiss">
+                            <i class="fas fa-times"></i>
+                            Later
+                        </button>
+                    </div>
+
+                    <!-- Swipe Indicator -->
+                    <div class="swipe-indicator">
+                        <span>Swipe for details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <!-- Digital Crown -->
+                <div class="digital-crown"></div>
+            </div>
+        </div>
+
+        <!-- Watch Band -->
+        <div class="watch-band-top"></div>
+        <div class="watch-band-bottom"></div>
+    </div>
+
+    <!-- Demo Controls -->
+    <div class="demo-controls">
+        <h3>Fitness Watch Alert Demo</h3>
+        <p>This shows how GOTR volunteers receive urgent coverage notifications on their smartwatch.</p>
+        <button onclick="simulateVibration()">Simulate Haptic Alert</button>
+    </div>
+
+    <script>
+        // Simulate watch vibration animation
+        function simulateVibration() {
+            const watchFrame = document.querySelector('.watch-frame');
+            watchFrame.classList.add('vibrating');
+            
+            // Play a subtle animation
+            setTimeout(() => {
+                watchFrame.classList.remove('vibrating');
+            }, 300);
+            
+            // Repeat for haptic pattern
+            setTimeout(() => {
+                watchFrame.classList.add('vibrating');
+                setTimeout(() => {
+                    watchFrame.classList.remove('vibrating');
+                }, 300);
+            }, 400);
+        }
+
+        // Auto-play vibration on load
+        setTimeout(simulateVibration, 1000);
+
+        // Pulse the urgent badge
+        setInterval(() => {
+            document.querySelector('.urgent-badge').classList.add('pulse');
+            setTimeout(() => {
+                document.querySelector('.urgent-badge').classList.remove('pulse');
+            }, 1000);
+        }, 3000);
+    </script>
+</body>
+</html>
