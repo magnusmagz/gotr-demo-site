@@ -13,9 +13,10 @@
             background-color: #f5f5f5;
         }
         h1 {
-            color: #333;
+            color: #E4002B;  /* GOTR Red */
             text-align: center;
             margin-bottom: 40px;
+            font-weight: bold;
         }
         .logo {
             display: block;
@@ -33,26 +34,33 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
+            border-top: 4px solid #E4002B;  /* GOTR Red accent */
         }
         .demo-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(228, 0, 43, 0.15);
         }
         .demo-card h2 {
             margin: 0 0 10px 0;
             font-size: 1.2em;
-            color: #333;
+            color: #E4002B;  /* GOTR Red */
+        }
+        .demo-card p {
+            color: #666;
+            line-height: 1.5;
         }
         .demo-card a {
             display: inline-block;
             margin-top: 10px;
-            color: #0066cc;
+            color: #F47920;  /* GOTR Orange */
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.2s;
         }
         .demo-card a:hover {
-            text-decoration: underline;
+            color: #E4002B;  /* GOTR Red on hover */
+            text-decoration: none;
         }
     </style>
 </head>
